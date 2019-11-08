@@ -11,14 +11,18 @@
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h1>Welcome to PizzaBot!</h1>
-        <h2>We may be robots, but we still hand-craft your order!</h2>
+        <h1>Welcome to PizzaBot</h1>
+        <h2>Bot-crafted pizza made to order</h2>
       </div>
 
-      <h2>Bot Basics</h2>
+      <h3>Bot Basics</h3>
+      <p>Hours of Operation: We are open at all time indexes, because we do not require sleep.</p>
+
       <p>Quality Assurance: All of our pizzas start with crust rolled to a thickness of exactly 3.168 millimeters, topped with red sauce and mozzarella cheese.</p>
 
       <p>Menu: We don't have any recommendations about what toppings should go together, because, well, we're robots, and we don't eat food. That means you can combine anything you want. Judgment Bot no longer works here, so you will not be judged.</p>
+
+      <p>We won't give you a crustless pizza with topics on lettuce. We have heard this is sometimes called a "salad". This does not compute.</p>
 
       <p>Party Pizza: We make pizzas one at a time. Literally. One at a time. So if you want two pizzas, you will have to place two separate orders. We would like to expand our subroutines, but we receive an error message every time we try.</p>
 
@@ -47,7 +51,7 @@
         </div>
 
         <h3>Select your favorite toppings</h3>
-        Payment required: $1.00 per topping. But you have to order a pizza. We won't give you a crustless pizza on lettuce. We have heard they are sometimes called "salads". This does not compute.
+        Payment required: $1.00 per topping.
         <div class="form-group">
           <!-- <label for="test">This is only a test</label>
           <input type="text" id="test" class="form-control"> -->
@@ -69,6 +73,9 @@
 
       <div id="order-summary">
         <h3>Your order</h3>
+        <ul id="order-list">
+
+        </ul>
           <p>Your pizza will be this size: <span class="ordered-size"></span></p>
           <p>Your pizza will have this many toppings: <span class="ordered-toppings"></span></p>
           <p>You will pay us this much money: <span class="ordered-price"></span></p>

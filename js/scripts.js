@@ -23,7 +23,8 @@ Pizza.prototype.getPrice = function () {
 
 
 
-// function displayPizzaOrder(pizzaOrderToDisplay) {
+Pizza.prototype.displayOrder = function(size, price) {
+  return this.size, this.price}
 //
 // }
 
@@ -48,7 +49,10 @@ $(document).ready(function (){
 
 // //these are where info goes to the DOM
 $(".ordered-size").text(sizeInput);
-//  $(".ordered-toppingsArray").text(toppingsArray);
+// $(".ordered-price").text(this.price)
+
+myPizza.displayOrder(sizeInput);
+console.log(myPizza)
   });
 });
 
