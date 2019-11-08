@@ -6,13 +6,14 @@ function Pizza (size) {
 
 Pizza.prototype.getPrice = function () {
   // this.toppings.forEach(function (topping)
-  if (this.size === "small") {
+  if (this.size === "Small") {
     this.price += 10;
-  } else if (this.size === "medium") {
+  } else if (this.size === "Medium") {
     this.price += 15;
   } else {
     this.price += 20;
   }
+  return this.price;
 };
 
 
