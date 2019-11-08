@@ -6,11 +6,71 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.4.1.js" charset="utf-8"></script>
     <script src="js/scripts.js" charset="utf-8"></script>
-    <title></title>
+    <title>PizzaBot</title>
   </head>
   <body>
     <div class="container">
-      
+      <div class="jumbotron">
+        <h1>Welcome to PizzaBot!</h1>
+        <h2>We may be robots, but we still hand-craft your order!</h2>
+      </div>
+
+      <h2>Intro Goes Here</h2>
+      <p>All of our pizzas start with crust rolled to a thickness of exactly 3.168 millimeters, topped with red sauce and mozzarella cheese.</p>
+
+      <p>We don't have any recommendations about what toppings should go together, because, well, we're robots, and we don't eat food. That means you can combine anything you want--no judgment!</p>
+
+      <p>We make pizzas one at a time. Literally. One at a time. So if you want two pizzas, you will have to place two separate orders. We would like to expand our subroutines, but our human overlords will not respond to our requests.</p>
+
+      <form id="orderForm">
+
+        <h3>Select a size</h3>
+        <div class="form-group">
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="small">
+              Small: 10-inch pizza, serves 1-2 humans
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="medium">
+              Medium: 14-inch pizza, serves 3-4 humans
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="large" checked>
+              Large: 18-inch pizza, serves 5-6 humans
+            </label>
+          </div>
+        </div>
+
+        <h3>Select your favorite toppings</h3>
+        <div class="form-group">
+          <input type="checkbox" name="toppings" value="pepperoni"> Pepperoni<br>
+          <input type="checkbox" name="toppings" value="sausage"> Sausage<br>
+          <input type="checkbox" name="toppings" value="ham"> Ham<br>
+          <input type="checkbox" name="toppings" value="greenPepper"> Green Peppers<br>
+          <input type="checkbox" name="toppings" value="onion"> Onions<br>
+          <input type="checkbox" name="toppings" value="anchovy"> Anchovies<br>
+          <input type="checkbox" name="toppings" value="mozzarella"> Fresh mozzarella<br>
+          <input type="checkbox" name="toppings" value="pineapple"> Pineapple<br>
+          <input type="checkbox" name="toppings" value="mushrooms"> Mushrooms<br>
+          <input type="checkbox" name="toppings" value="olives"> Black olives<br>
+          <input type="checkbox" name="toppings" value="basil"> Fresh basil<br>
+        </div>
+
+        <button type="submit" name="button">Submit your order!</button>
+      </form>
+
+      <div id="order-summary">
+        <h3>Summary of Your Order</h3>
+          <p>Your pizza will be this size:<span class="ordered-size"></span></p>
+          <p>Your pizza will have these toppings: <span class="ordered-toppings"></span></p>
+          <p>You will pay us this much money:<span class="ordered-price"></span></p>
+        </div>
+
     </div>
   </body>
 
