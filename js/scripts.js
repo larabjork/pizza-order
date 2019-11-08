@@ -2,39 +2,43 @@ function Pizza (size, toppings) {
   this.size = size,
   this.toppings = toppings,
   this.price = 0
-}
+};
 
-// Pizza.prototype.getPrice = function () {
-//   this.toppings.forEach(function (topping)
-// INSERT MORE HERE WITH FOR EACH LOP)
+Pizza.prototype.getPrice = function () {
+  // this.toppings.forEach(function (topping)
+  if (this.size === small) {
+    this.price += 10;
+  } else if (this.size === medium) {
+    this.price += 15;
+  } else {
+    this.price += 20;
+  }
+  console.log(Pizza.getPrice)
+};
+
+
+
+
+
+
+
+
+// function displayPizzaOrder(pizzaOrderToDisplay) {
+//
 // }
-//  if (this.size =)
-
-
-
-
-
-//THIS IS HOW TO GATHER INPUT FROM THE RADIO BUTTONS
-
-var pizzaOrder = new Pizza(); //this might need to move and/or be set to let rather than var...
-
-function displayPizzaOrder(pizzaOrderToDisplay) {
-
-}
 
 $(document).ready(function (){
   $("form#orderForm").submit(event){
   event.preventDefault();
-  var inputtedSize = $("input:radio[name=size]:checked").val();
-  //need var for toppings...
-  //pizzaOrder.getPrice(WHAT GOES HERE);
+  let sizeInput = $("input:radio[name=size]:checked").val();
+  // let toppingsInputs = $(#toppings: checked)://this id doesn't exist yet;
+  // let toppingsArray = [];
+  // toppingsInputs.forEach(function(toppingInput){
+  //   toppingsArray.push(toppingInput.val());
+  // });
 
-
-
-
-
-
-
+let pizzaOrder = new Pizza(sizeInput, toppingsArray);
+let price = pizzaOrder.getPrice();
 
 }
 });
