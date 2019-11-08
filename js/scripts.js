@@ -30,17 +30,26 @@
 $(document).ready(function (){
   $("form#order-form").submit(function(event) {
   event.preventDefault();
-  let sizeInput = $("input:radio[name=size]:checked").val();
-  $(".ordered-size").text(sizeInput);
+    let sizeInput = $("input:radio[name=size]:checked").val();
+    $(".ordered-size").text(sizeInput);
 
-  // let toppingsInputs = $(#toppings: checked)://this id doesn't exist yet;
-  // let toppingsArray = [];
-  // toppingsInputs.forEach(function(toppingInput){
-  //   toppingsArray.push(toppingInput.val());
-  // });
+
+//     let toppingsInputs = [$("input:checkbox[class=top]:checked")];
+//     let toppingsArray = [];
+//     toppingsInputs.forEach(function(toppingsInput){
+//       toppingsArray.push(toppingsInput)
+//       return toppingsInput
+//     });
 //
+//
+//
+// //these are where info goes to the DOM
+//     $(".ordered-toppingsArray").text(toppingsArray);
+
+  });
+});
+
+
+
 // let pizzaOrder = new Pizza(sizeInput, toppingsArray);
 // let price = pizzaOrder.getPrice();
-
-});
-});
