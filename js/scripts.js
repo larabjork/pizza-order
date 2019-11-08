@@ -23,6 +23,7 @@ Pizza.prototype.getPrice = function () {
 
 
 
+
 Pizza.prototype.displayOrder = function(size, price) {
   return this.size, this.price}
 //
@@ -36,7 +37,6 @@ $(document).ready(function (){
 
     let myPizza =new Pizza(sizeInput);
     myPizza.getPrice();
-    console.log(myPizza)
 
     // let toppingsInputs = [$("input:checkbox[class=top]:checked")];
     // let toppingsArray = [];
@@ -48,11 +48,13 @@ $(document).ready(function (){
 
 
 // //these are where info goes to the DOM
-$(".ordered-size").text(sizeInput);
+$(".ordered-size").html(sizeInput);
+// $(".ordered-price").html
 // $(".ordered-price").text(this.price)
 
 myPizza.displayOrder(sizeInput);
-console.log(myPizza)
+console.log(myPizza.price)
+$(".ordered-price").html(myPizza.price);
   });
 });
 
