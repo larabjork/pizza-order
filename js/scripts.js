@@ -1,11 +1,13 @@
-function Pizza (size) {
+function Pizza (size, toppings) {
   this.size = size,
-  // this.toppings = toppings, WILL ADD BACK IN ONCE CHECKBOXES ARE WORKING
+  this.toppings = toppings,
   this.price = 0
 };
 
 Pizza.prototype.getPrice = function () {
-  // this.toppings.forEach(function (topping)
+this.toppings.forEach(function(topping){
+  this.price +=1;
+});
   if (this.size === "Small") {
     this.price += 10;
   } else if (this.size === "Medium") {
@@ -13,7 +15,7 @@ Pizza.prototype.getPrice = function () {
   } else {
     this.price += 20;
   }
-  return this.price;
+  return this.price
 };
 
 
@@ -33,28 +35,25 @@ $(document).ready(function (){
   $("form#order-form").submit(function(event) {
   event.preventDefault();
     let sizeInput = $("input:radio[name=size]:checked").val();
-    console.log(sizeInput)
 
-    let myPizza =new Pizza(sizeInput);
+
+    let toppingsInputs = $("input:checkbox[class=top]:checked");
+    let toppingsArray = [];
+    toppingsInputs.forEach(function(toppingsInput){
+      toppingsArray.push(toppingsInput);
+      console.log(toppingsArray)
+      console.log(toppingsInput)
+      return toppingsInput
+    });
+
+    let myPizza =new Pizza(sizeInput,toppingsInputs);
     myPizza.getPrice();
-
-    // let toppingsInputs = [$("input:checkbox[class=top]:checked")];
-    // let toppingsArray = [];
-    // toppingsInputs.forEach(function(toppingsInput){
-    //   toppingsArray.push(toppingsInput)
-    //   return toppingsInput
-    // });
-
 
 
 // //these are where info goes to the DOM
 $(".ordered-size").html(sizeInput);
-// $(".ordered-price").html
-// $(".ordered-price").text(this.price)
-
-myPizza.displayOrder(sizeInput);
-console.log(myPizza.price)
 $(".ordered-price").html(myPizza.price);
+console.log(myPizza)
   });
 });
 
