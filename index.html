@@ -21,71 +21,72 @@
       <p><strong>Quality Assurance:</strong> All of our pizzas start with crust rolled to a thickness of exactly 3.168 millimeters, topped with red sauce and mozzarella cheese.</p>
 
       <p><strong>Menu:</strong></p>
-        <ul>
-          <li>We do not have any recommendations about what toppings should go together, because we are robots, and we do not consume nutrients. You can combine anything you want. Judgment Bot no longer works here, so you will not be judged.</li>
+      <ul>
+        <li>We do not have any recommendations about what toppings should go together, because we are robots, and we do not consume nutrients. You can combine anything you want. Judgment Bot no longer works here, so you will not be judged.</li>
 
-          <li>We have heard of something called a "salad". It appears to be a crustless pizza with toppings on lettuce. This does not compute.</li>
+        <li>We have heard of something called a "salad". It appears to be a crustless pizza with toppings on lettuce. This does not compute.</li>
 
-        </ul>
+      </ul>
 
       <p><strong>Maximum Order:</strong> We make pizzas one at a time. We are robots and we mean everything literally. We make only one pizza at a time. If you want two pizzas, you will have to place two separate orders. We would like to expand our subroutines, but we receive an error message every time we try.</p>
 
-      <form id="order-form">
+      <div class="row">
+        <div class="col-md-6">
+          <form id="order-form">
 
-        <h3>Select a size</h3>
-        <div class="form-group">
-          <div class="radio">
-            <label>
-              <input type="radio" name="size" value="Small">
-              Small: 10-inch pizza, serves 1-2 humans. Payment required: $10.00
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="size" value="Medium">
-              Medium: 14-inch pizza, serves 3-4 humans. Payment required: $15.00
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="size" value="Large" checked>
-              Large: 18-inch pizza, serves 5-6 humans. Payment required: $20.00
-            </label>
-          </div>
+            <h3>Select a size</h3>
+            <div class="well">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="Small">
+                  <b>Small:</b> 10-inch pizza, serves 1-2 humans. Payment required: $10
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="Medium">
+                  <b>Medium:</b> 14-inch pizza, serves 3-4 humans. Payment required: $15
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="Large" checked>
+                  <b>Large:</b> 18-inch pizza, serves 5-6 humans. Payment required: $20
+                </label>
+              </div>
+            </div>
+
+            <h3>Select your favorite toppings</h3>
+            Payment required: $1 per topping
+            <div class="well">
+              <input type="checkbox" name="toppings" class="top" value="pepperoni"> Pepperoni<br>
+              <input type="checkbox" name="toppings" class="top" value="sausage"> Sausage<br>
+              <input type="checkbox" name="toppings" class="top" value="ham"> Ham<br>
+              <input type="checkbox" name="toppings" class="top" value="greenPeppers"> Green peppers<br>
+              <input type="checkbox" name="toppings" class="top" value="onions"> Onions<br>
+              <input type="checkbox" name="toppings" class="top" value="anchovies"> Anchovies<br>
+              <input type="checkbox" name="toppings" class="top" value="mozzarella"> Fresh mozzarella<br>
+              <input type="checkbox" name="toppings" class="top" value="pineapple"> Pineapple<br>
+              <input type="checkbox" name="toppings" class="top" value="mushrooms"> Mushrooms<br>
+              <input type="checkbox" name="toppings" class="top" value="olives"> Black olives<br>
+              <input type="checkbox" name="toppings" class="top" value="basil"> Fresh basil<br>
+            </div>
+
+            <button type="submit" class="btn btn-lg" name="button">Submit your order!</button>
+          </form>
         </div>
+        <div class="col-md-6">
+            <div id="order-summary">
+              <h3>Your order</h3>
+              <div class="well">
+                <p><b>Your pizza will be this size: </b><span class="ordered-size"></span></p>
+                <p><b>Your pizza will have these toppings: </b><span class="ordered-toppings"></span></p>
+                <p><b>You will pay us this much money: </b>$<span class="ordered-price"></span></p>
+              </div>
+            </div>
 
-        <h3>Select your favorite toppings</h3>
-        Payment required: $1.00 per topping.
-        <div class="form-group">
-          <!-- <label for="test">This is only a test</label>
-          <input type="text" id="test" class="form-control"> -->
-          <input type="checkbox" name="toppings" class="top" value="pepperoni"> Pepperoni<br>
-          <input type="checkbox" name="toppings" class="top" value="sausage"> Sausage<br>
-          <input type="checkbox" name="toppings" class="top" value="ham"> Ham<br>
-          <input type="checkbox" name="toppings" class="top" value="greenPeppers"> Green peppers<br>
-          <input type="checkbox" name="toppings" class="top" value="onions"> Onions<br>
-          <input type="checkbox" name="toppings" class="top" value="anchovies"> Anchovies<br>
-          <input type="checkbox" name="toppings" class="top" value="mozzarella"> Fresh mozzarella<br>
-          <input type="checkbox" name="toppings" class="top" value="pineapple"> Pineapple<br>
-          <input type="checkbox" name="toppings" class="top" value="mushrooms"> Mushrooms<br>
-          <input type="checkbox" name="toppings" class="top" value="olives"> Black olives<br>
-          <input type="checkbox" name="toppings" class="top" value="basil"> Fresh basil<br>
-        </div>
-
-        <button type="submit" name="button">Submit your order!</button>
-      </form>
-
-      <div id="order-summary">
-        <h3>Your order</h3>
-
-
-        </ul>
-          <p>Your pizza will be this size: <span class="ordered-size"></span></p>
-          <p>Your pizza will have these toppings: <span class="ordered-toppings"></span></p>
-          <p>You will pay us this much money: <span class="ordered-price"></span></p>
-<!-- the ordered price doesn't connect yet -->
-        </div>
-
+          </div>
+      </div>
     </div>
   </body>
 
