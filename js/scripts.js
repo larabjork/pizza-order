@@ -24,16 +24,11 @@ $(document).ready(function (){
   $("form#order-form").submit(function(event) {
   event.preventDefault();
     let sizeInput = $("input:radio[name=size]:checked").val();
-
-//this section isn't working - with [] around jQuery for checkboxes, it at least doesn't return error message, but the contents of the array isn't what I expected from the class example. This is where I need to work.
-    let toppingsInputs = [$("input:checkbox[class=top]:checked")];
+    let toppingsInputs = $("input:checkbox[class=top]:checked");
     let toppingsArray = [];
-    toppingsInputs.forEach(function(toppingsInput){
-      toppingsArray.push(toppingsInput);
-      console.log(toppingsArray)
-      console.log(toppingsInput)
-      return toppingsInput
-    });
+    for (var i = 0; i < toppingsInputs.length; i +=1) {toppingsArray.push(toppingsInputs[i].value);
+   }
+
 
     let myPizza =new Pizza(sizeInput,toppingsArray);
     myPizza.getPrice();
