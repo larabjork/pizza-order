@@ -40,7 +40,6 @@ Output: Selection reported back to user/available for price calculation
 Input: List of selections made by the user
 Output: Total price of pizza order
 
-
 ### Technologies Used
 HTML, CSS, Bootstrap 3.3.7, JavaScript, and jQuery v3.4.1 (uncompressed development version).
 Project was written using Google Chrome; no other browsers were tested for compatibility.
@@ -49,15 +48,9 @@ Project was written using Google Chrome; no other browsers were tested for compa
 There shouldn't be any special setup required. If something doesn't display correctly or goes wrong somehow, please contact me at <lara.m.bjork@gmail.com> and I will do my best to troubleshoot for you.
 
 ### Known Issues
-* KEEP THIS IF IT APPLIES: Although there is responsive sizing in place, this project is best viewed on standard desktop. It was not tested on a large desktop, table, or phone.
-
-
-
-### Where to Find This Project
-USE THIS SECTION ONLY IF GH PAGE CREATED
-
+Although there is responsive sizing in place, this project is best viewed on standard desktop. It was not tested on a large desktop, table, or phone.
 
 ### License
 This software is licensed under the MIT license.
 
-_Copyright (c) 2019 ** PARTNER NAME and Lara Bjork **_
+Copyright (c) 2019 Lara Bjork
